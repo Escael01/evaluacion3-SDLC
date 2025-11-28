@@ -1,3 +1,13 @@
-"scripts": {
-  "test": "jest"
+{
+  "name": "evaluacion3-sdlc",
+  "version": "1.0.0",
+  "description": "Proyecto SDLC Evaluacion 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
 }
