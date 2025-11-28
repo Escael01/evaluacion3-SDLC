@@ -49,7 +49,6 @@ jobs:
           tags: escael01/my-app:latest
 
   sonarcloud:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -63,7 +62,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   snyk:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     needs: build
     steps:
