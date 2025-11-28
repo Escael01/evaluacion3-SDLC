@@ -1,10 +1,13 @@
 {
-  "name": "my-app",
+  "name": "evaluacion3-sdlc",
   "version": "1.0.0",
-  "description": "Proyecto de prueba para Docker build",
+  "description": "Proyecto SDLC Evaluacion 3",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "jest"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
 }
