@@ -9,5 +9,10 @@
   "dependencies": {},
   "devDependencies": {
     "jest": "^29.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/*.test.js"
+    ]
   }
 }
