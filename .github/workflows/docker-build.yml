@@ -85,6 +85,7 @@ jobs:
       - name: Run Docker Scout
         uses: docker/scout-action@v1
         with:
+          command: cves
           image: escael01/my-app:latest
           dockerhub-user: ${{ secrets.DOCKER_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKER_PASSWORD }}
