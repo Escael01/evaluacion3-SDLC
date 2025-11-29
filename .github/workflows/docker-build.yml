@@ -95,4 +95,4 @@ jobs:
           dockerhub-password: ${{ secrets.DOCKER_PASSWORD }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           exit-code: true
-          exit-on: critical
+          only-severities: critical
