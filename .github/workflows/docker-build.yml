@@ -87,4 +87,3 @@ jobs:
         with:
           image: escael01/my-app:latest
           token: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-
