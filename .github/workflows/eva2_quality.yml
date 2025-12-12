@@ -25,13 +25,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Ejecutar Jest usando NPX (soluciona "Permission denied")
       - name: Run Unit Tests
-        run: npx jest
+        run: node ./node_modules/jest/bin/jest.js
 
-      # Lo mismo para cobertura
       - name: Generate Coverage Report
-        run: npx jest --coverage
+        run: node ./node_modules/jest/bin/jest.js --coverage
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
