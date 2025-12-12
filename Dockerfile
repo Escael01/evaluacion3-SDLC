@@ -1,15 +1,23 @@
+# Usa una imagen base de Node.js
 FROM node:18-alpine
 
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copiar los archivos package.json y package-lock.json primero para aprovechar la caché de Docker
+# Copia el archivo package.json y package-lock.json para instalar las dependencias
 COPY package*.json ./
 
-# Instalar las dependencias del proyecto
+# Instala las dependencias
 RUN npm install
 
-# Copiar el resto del código fuente
+# Si necesitas que jest esté disponible globalmente en el contenedor
+RUN npm install -g jest
+
+# Copia todo el código fuente al contenedor
 COPY . .
 
-# Ejecutar las pruebas con Jest
-CMD ["npm", "test"]
+# Expone el puerto que utiliza la aplicación (ajustar según tu caso)
+EXPOSE 3000
+
+# Comando para ejecutar la aplicación
+CMD ["node", "index.test.js"]
