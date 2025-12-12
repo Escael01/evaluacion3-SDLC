@@ -10,7 +10,7 @@ jobs:
   quality-checks:
     name: Quality & Security
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -25,11 +25,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # Ejecutar Jest usando NPX (soluciona "Permission denied")
       - name: Run Unit Tests
-        run: npm test
+        run: npx jest
 
+      # Lo mismo para cobertura
       - name: Generate Coverage Report
-        run: npm run test:coverage
+        run: npx jest --coverage
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
