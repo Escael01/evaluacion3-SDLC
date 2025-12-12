@@ -2,15 +2,15 @@ name: EVA3 - Docker Build & Push
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "main" ]  # Solo se ejecutará cuando haya un push a la rama 'main'
+  # pull_request:
+  #   branches: [ "main" ]  # Desactivado para evitar ejecuciones innecesarias
 
 jobs:
   docker-build:
     name: Build & Publish Docker Image
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -30,4 +30,5 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/evaluacion3-sdlc:latest
+
 
