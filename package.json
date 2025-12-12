@@ -2,9 +2,9 @@
   "name": "evaluacion3-sdlc",
   "version": "1.0.0",
   "description": "Proyecto SDLC - Evaluación 2 + Evaluación 3",
-  "main": "index.test.js",  # Este es el archivo principal, asegúrate de que sea correcto
+  "main": "index.test.js",  
   "scripts": {
-    "test": "jest",  # Comando para ejecutar los tests
+    "test": "jest",  
     "test:unit": "jest",
     "test:coverage": "jest --coverage"
   },
