@@ -48,7 +48,7 @@ jobs:
 
   # ETAPA 2: Build, Push & Deploy (EVA3)
   build-deploy:
-    name: ETAPA 2: Build & Deploy
+    name: ETAPA 2:Build & Deploy
     runs-on: ubuntu-latest
     needs: [qa-seguridad]
 
