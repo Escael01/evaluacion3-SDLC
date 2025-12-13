@@ -1,18 +1,21 @@
 {
   "name": "evaluacion3-sdlc",
   "version": "1.0.0",
-  "description": "Proyecto SDLC Evaluacion 3",
-  "main": "index.js",
+  "description": "Proyecto SDLC - Evaluación 2 + Evaluación 3",
+  "main": "index.test.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:unit": "jest",
+    "test:coverage": "jest --coverage"
   },
-  "dependencies": {},
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.7.0"
   },
   "jest": {
     "testMatch": [
       "**/*.test.js"
-    ]
+    ],
+    "collectCoverage": true,
+    "coverageReporters": ["lcov", "text"]
   }
 }
