@@ -33,7 +33,7 @@ jobs:
         run: npm audit --audit-level=critical
 
       - name: Setup SonarCloud Scanner
-        uses: SonarSource/sonarcloud-github-action@v2.4.0
+        uses: SonarSource/sonarcloud-github-action@v2.2.0
         with:
           projectBaseDir: .
         env:
